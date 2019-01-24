@@ -1,4 +1,4 @@
-FROM larvacent/base-php:bionic
+FROM larvacent/base-php:cosmic
 
 LABEL maintainer="support@larvacent.com"
 
