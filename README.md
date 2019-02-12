@@ -39,15 +39,3 @@ Expand                                                | Version
 `redis`             | 3.1.6
 `yaml`             | 1.3.1/2.0.2
 `xdebug`             | 2.5.5 Only build tags
-
-## Build Tag
-
-openssh-client git subversion curl wget nano unzip diffutils ntp openjdk-8-jdk yuicompressor closure-compiler nodejs-8.9.4 yarn-1.3.2
-
-### Path
-/usr/local/bin/yuicompressor.jar
-/usr/local/bin/closure-compiler.jar
-
-
-
-
