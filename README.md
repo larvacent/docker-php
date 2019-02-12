@@ -11,8 +11,8 @@ Container                               | Distribution name        | PHP Version
 `larvacent/php:5.6`      | xenial (LTS)             | PHP 5.6
 `larvacent/php:7.0`      | xenial (LTS)             | PHP 7.0
 `larvacent/php:7.1`      | xenial (LTS)             | PHP 7.1
-`larvacent/php:7.2`      | xenial (LTS)             | PHP 7.2
-`larvacent/php:7.3`      | xenial (LTS)             | PHP 7.3
+`larvacent/php:7.2`      | cosmic (LTS)             | PHP 7.2
+`larvacent/php:7.3`      | cosmic (LTS)             | PHP 7.3
 
 ## Filesystem layout
 
