@@ -127,9 +127,9 @@ RUN set -xe \
 	&& apt-get update && apt-get install -y --no-install-recommends --no-install-suggests libmemcached11 libyaml-0-2 libnghttp2-14 $buildDeps && rm -r /var/lib/apt/lists/* \
 	\
 	&& msgpackVersion=2.0.3 \
-		igbinaryVersion=2.0.8 \
+		igbinaryVersion=3.0.1 \
 		memcachedVersion=3.1.3 \
-		redisVersion=4.2.0 \
+		redisVersion=4.3.0 \
 		yamlVersion=2.0.4 \
 	&& cd /usr/local/src \
 	&& curl -fSL http://pecl.php.net/get/msgpack-${msgpackVersion}.tgz -o msgpack-${msgpackVersion}.tgz \
