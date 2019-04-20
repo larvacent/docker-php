@@ -191,8 +191,8 @@ RUN set -xe \
 	&& ./configure \
 	&& make -j "$(nproc)" \
 	&& make install \
-	&& rm -rf /usr/local/src/redis-${redisVersion} \
-	&& echo "extension=redis.so" >> ${PHP_INI_DIR}/php/redis.ini \
+	&& rm -rf /usr/local/src/mongodb-${redisVersion} \
+	&& echo "extension=mongodb.so" >> ${PHP_INI_DIR}/php/mongodb.ini \
 	\
 	&& cd /usr/local/src \
 	&& curl -fSL http://pecl.php.net/get/yaml-${yamlVersion}.tgz -o yaml-${yamlVersion}.tgz \
