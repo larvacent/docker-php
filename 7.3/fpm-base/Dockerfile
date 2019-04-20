@@ -132,6 +132,7 @@ RUN set -xe \
 		memcachedVersion=3.1.3 \
 		redisVersion=4.3.0 \
 		yamlVersion=2.0.4 \
+		mongoVersion=1.5.3 \
 	&& cd /usr/local/src \
 	&& curl -fSL http://pecl.php.net/get/msgpack-${msgpackVersion}.tgz -o msgpack-${msgpackVersion}.tgz \
 	&& tar zxf msgpack-${msgpackVersion}.tgz \
@@ -175,6 +176,18 @@ RUN set -xe \
 	&& cd redis-${redisVersion} \
 	&& phpize \
 	&& ./configure --enable-redis --enable-redis-igbinary \
+	&& make -j "$(nproc)" \
+	&& make install \
+	&& rm -rf /usr/local/src/redis-${redisVersion} \
+	&& echo "extension=redis.so" >> ${PHP_INI_DIR}/php/redis.ini \
+	\
+	&& cd /usr/local/src \
+	&& curl -fSL http://pecl.php.net/get/mongodb-${mongoVersion}.tgz -o mongodb-${mongoVersion}.tgz \
+	&& tar zxf mongodb-${mongoVersion}.tgz \
+	&& rm -rf mongodb-${mongoVersion}.tgz \
+	&& cd mongodb-${mongoVersion} \
+	&& phpize \
+	&& ./configure \
 	&& make -j "$(nproc)" \
 	&& make install \
 	&& rm -rf /usr/local/src/redis-${redisVersion} \
