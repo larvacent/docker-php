@@ -131,7 +131,6 @@ RUN set -xe \
 		libssl-dev \
 		zlib1g-dev \
 		libmagick++-dev \
-		libpcre3-dev \
 	" \
 	\
 #	&& sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list \
@@ -192,17 +191,6 @@ RUN set -xe \
 	&& make install \
 	&& rm -rf /usr/local/src/imagick-${IMAGICK_VERSION} \
 	&& echo "extension=imagick.so" >> ${PHP_INI_DIR}/php/imagick.ini \
-	\
-	&& cd /usr/local/src \
-	&& curl -fSL http://pecl.php.net/get/apcu-${APCU_VERSION}.tgz -o apcu-${APCU_VERSION}.tgz \
-	&& tar zxf apcu-${APCU_VERSION}.tgz && rm -rf apcu-${APCU_VERSION}.tgz \
-	&& cd apcu-${APCU_VERSION} \
-	&& phpize \
-	&& ./configure \
-	&& make -j "$(nproc)" \
-	&& make install \
-	&& rm -rf /usr/local/src/apcu-${APCU_VERSION} \
-	&& echo "extension=apcu.so" >> ${PHP_INI_DIR}/php/apcu.ini \
 	\
 	&& cd /usr/local/src \
 	&& curl -fSL http://pecl.php.net/get/mongodb-${MONGO_VERSION}.tgz -o mongodb-${MONGO_VERSION}.tgz \
