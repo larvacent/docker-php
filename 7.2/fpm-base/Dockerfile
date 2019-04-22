@@ -176,7 +176,7 @@ RUN set -xe \
 	&& tar zxf imagick-${IMAGICK_VERSION}.tgz && rm -rf imagick-${IMAGICK_VERSION}.tgz \
 	&& cd imagick-${IMAGICK_VERSION} \
 	&& phpize \
-	&& ./configure
+	&& ./configure \
 	&& make -j "$(nproc)" \
 	&& make install \
 	&& rm -rf /usr/local/src/imagick-${IMAGICK_VERSION} \
@@ -187,7 +187,7 @@ RUN set -xe \
 	&& tar zxf apcu-${APCU_VERSION}.tgz && rm -rf apcu-${APCU_VERSION}.tgz \
 	&& cd apcu-${APCU_VERSION} \
 	&& phpize \
-	&& ./configure
+	&& ./configure \
 	&& make -j "$(nproc)" \
 	&& make install \
 	&& rm -rf /usr/local/src/apcu-${APCU_VERSION} \
