@@ -124,10 +124,11 @@ RUN set -xe \
 		libyaml-dev \
 		libnghttp2-dev \
 		libssl-dev \
+		libmagick++-dev \
 	" \
 	\
 #	&& sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list \
-	&& apt-get update && apt-get install -y --no-install-recommends --no-install-suggests libmemcached11 libyaml-0-2 libnghttp2-14 $buildDeps && rm -r /var/lib/apt/lists/* \
+	&& apt-get update && apt-get install -y --no-install-recommends --no-install-suggests libmemcached11 imagemagick libyaml-0-2 libnghttp2-14 $buildDeps && rm -r /var/lib/apt/lists/* \
 	\
 	&& cd /usr/local/src \
 	&& curl -fSL http://pecl.php.net/get/msgpack-${MSGPACK_VERSION}.tgz -o msgpack-${MSGPACK_VERSION}.tgz \
