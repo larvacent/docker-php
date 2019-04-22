@@ -39,7 +39,6 @@ RUN set -xe \
 		libpng-dev \
 		libfreetype6-dev \
 		libgmp-dev \
-		libmcrypt-dev \
 		libedit-dev \
 		libtidy-dev \
 		libxslt-dev \
