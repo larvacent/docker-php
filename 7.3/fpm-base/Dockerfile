@@ -45,6 +45,7 @@ RUN set -xe \
 		libtidy-dev \
 		libxslt-dev \
 		libzip-dev \
+		libpcre3-dev \
 	" \
 	\
 #	&& sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list \
