@@ -43,7 +43,7 @@ before_script:
   - image="larvacent/php:${VERSION}-${VARIANT}"
 
 script:
-  - travis_retry docker build --build-arg PHP_VERSION=${PHP_VERSION} -t "$image" .
+  - travis_retry docker build --build-arg PHP_VERSION=${PHP_VERSION} --build-arg REDIS_VERSION=${REDIS_VERSION} --build-arg MONGO_VERSION=${MONGO_VERSION} --build-arg YAML_VERSION=${YAML_VERSION} --build-arg MSGPACK_VERSION=${MSGPACK_VERSION} --build-arg IGBINARY_VERSION=${IGBINARY_VERSION} --build-arg MEMCACHED_VERSION=${MEMCACHED_VERSION} -t "$image" .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
