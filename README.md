@@ -28,14 +28,3 @@ File                                                | Description
 `/usr/local/etc/nginx/nginx.conf`                 | Global nginx configuration options
 `/usr/local/etc/php-fpm.d/www.conf`               | php-fpm pool configuration
 `/usr/local/etc/php/php-fpm.conf`             | PHP FPM daemon configuration
-
-## Expand
-
-Expand                                                | Version
---------------------------------------------------- | ------------------------------------------------------------------------------
-`msgpack`                          | 0.5.7/2.0.2
-`igbinary`                 | 2.0.5
-`memcached`               | 2.2.0/3.0.4
-`redis`             | 3.1.6
-`yaml`             | 1.3.1/2.0.2
-`xdebug`             | 2.5.5 Only build tags
